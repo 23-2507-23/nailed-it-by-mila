@@ -1,0 +1,250 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom right, #f9ebfb, #fff0f5);
+    color: #333;
+    overflow-x: hidden; /* Prevents horizontal scroll on small screens */
+}
+
+/* Header */
+header {
+    background: #d8a7b1;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.small-header {
+    font-size: 0.6em; /* Smaller "by Milania" in header */
+    vertical-align: middle;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f6e7e6;
+}
+
+/* Home Section */
+#home {
+    padding: 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #b66a7f;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows images to wrap on smaller screens */
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 200px; /* Limits size on desktop, scales down on mobile */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #f6e7e6;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #b66a7f;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #d8a7b1;
+}
+
+/* Book Section */
+#book {
+    padding: 20px;
+    background: #fff0f5;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+#book h2 {
+    color: #b66a7f;
+    margin-bottom: 10px;
+}
+
+#book p {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #666;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid #d8a7b1;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%; /* Full width on all screens */
+}
+
+button {
+    padding: 12px;
+    background: #b66a7f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #d8a7b1;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f6e7e6;
+    color: #666;
+    width: 100%;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Tablet and below */
+    header h1 {
+        font-size: 2rem; /* Slightly smaller header */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Tighter nav spacing */
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .gallery {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center;
+    }
+
+    .gallery img {
+        max-width: 250px; /* Slightly larger on tablets */
+    }
+
+    #book {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Phone screens */
+    header {
+        padding: 0.8rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Smaller header on phones */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Stack nav items vertically */
+        margin-top: 5px;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Vertical spacing for nav */
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .gallery img {
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    #book {
+        padding: 15px;
+    }
+
+    input, button {
+        font-size: 0.9rem; /* Smaller text in form */
+    }
+}
